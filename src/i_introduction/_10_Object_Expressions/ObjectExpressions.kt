@@ -3,8 +3,9 @@ package i_introduction._10_Object_Expressions
 import util.TODO
 import util.doc10
 import java.util.*
+import kotlin.Comparator
 
-fun todoTask10(): Nothing = TODO(
+fun todoTask10Expl(): Nothing = TODO(
     """
         Task 10.
         Read about object expressions that play the same role in Kotlin as anonymous classes do in Java.
@@ -15,6 +16,10 @@ fun todoTask10(): Nothing = TODO(
     """,
     documentation = doc10()
 )
+
+fun todoTask10(): Comparator<Int> = Comparator({ a: Int, b: Int ->
+    b.compareTo(a)
+})
 
 fun task10(): List<Int> {
     val arrayList = arrayListOf(1, 5, 2)
